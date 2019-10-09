@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+
 import { TableComponent } from './table/table.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimeComponent } from './time/time.component';
@@ -15,12 +15,25 @@ import { DividerComponent } from './divider/divider.component';
 import { MaskComponent } from './mask/mask.component';
 import { CustomDirective } from './custom.directive';
 import { BaseComponent } from './base/base.component';
+import {ComponentService} from './component.service';
+import { HeaderComponent } from './header/header.component'
 
 
 @NgModule({
+  entryComponents: [ 
+    HeaderComponent,
+    TableComponent,
+    FooterComponent,
+    TimeComponent,
+    DropdownComponent,
+    SpinnerComponent,
+    TextboxComponent,
+    ButtonComponent,
+    DividerComponent,
+    MaskComponent ],
   declarations: [
     AppComponent,
-    HeaderComponent,
+   
     TableComponent,
     FooterComponent,
     TimeComponent,
@@ -31,13 +44,14 @@ import { BaseComponent } from './base/base.component';
     DividerComponent,
     MaskComponent,
     CustomDirective,
-    BaseComponent
+    BaseComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ComponentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

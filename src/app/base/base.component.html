@@ -1,29 +1,27 @@
 <div class="row" >
-    <div class="col-sm-8">
-            <!-- <ng-template appCustom></ng-template> -->
+    <div class="col-sm-8" id="div2" (drop)="drop($event)" (dragover)="allowDrop($event)">     
+         <ng-template appCustom></ng-template>
     </div>
     <div class="col-sm-4" >
         <table data-toggle="table" class="table table-bordered table-hover table-condensed table-striped">
             <thead>
-            <tr>
-                <th>Drag items from the list</th>
-            </tr>
+                <tr>
+                    <th>Drag items from the list</th>
+                </tr>
             </thead>
             <tbody>
-            <tr><td>Header</td></tr>
-            <tr><td>Table</td></tr>
-            <tr><td>Footer</td></tr>
-            <tr> <td>Time</td></tr>
-            <tr><td>Dropdown</td></tr>
-            <tr> <td> Spinner</td></tr>
-            <tr> <td> Button</td></tr>
-            <tr>  <td> Divider</td></tr>
-            <tr> <td> Mask</td></tr>
-
+                <!-- <tr><td id="div2" (dragstart)="this.componentService.drag($event)" draggable="true" >Header</td></tr> -->
+                <tr><td id="id0" (dragstart)="this.componentService.drag($event)" draggable="true">Header</td></tr>
+                <tr><td id="id1" (dragstart)="this.componentService.drag($event)" draggable="true">Table</td></tr>
+                <tr><td id="id3" (dragstart)="this.componentService.drag($event)" draggable="true">Footer</td></tr>
+                <tr> <td id="id4" (dragstart)="this.componentService.drag($event)" draggable="true">Time</td></tr>
+                <tr><td id="id5" (dragstart)="this.componentService.drag($event)" draggable="true">Dropdown</td></tr>
+                <tr> <td id="id6" (dragstart)="this.componentService.drag($event)" draggable="true"> Spinner</td></tr>
+                <tr> <td id="id7" (dragstart)="this.componentService.drag($event)" draggable="true"> Button</td></tr>
+                <tr>  <td id="id8" (dragstart)="this.componentService.drag($event)" draggable="true"> Divider</td></tr>
+                <tr> <td id="id9" (dragstart)="this.componentService.drag($event)" draggable="true"> Mask</td></tr>
             </tbody>
         </table>
     </div>
 </div>
-  
-      
   
