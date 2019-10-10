@@ -2,7 +2,7 @@ import { Component, OnInit, Input,ViewChild, ComponentFactoryResolver} from '@an
 // import { AdItem } from '../ad-item';
 import {ComponentService} from '../component.service'
 import { ButtonComponent } from '../button/button.component';
-import { HeaderComponent } from '../Header/header.component';
+// import { HeaderComponent } from '../Header/header.component';
 import { DividerComponent } from '../divider/divider.component';
 
 
@@ -13,6 +13,10 @@ import { TimeComponent } from '../time/time.component';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { SpinnerComponent } from '../spinner/spinner.component';
 import { MaskComponent } from '../mask/mask.component';
+import {HeadersComponent} from '../headers/headers.component'
+import { TextboxComponent } from '../textbox/textbox.component';
+import {HomeComponent} from '../home/home.component'
+import { getLocaleMonthNames } from '@angular/common';
 
 @Component({
   selector: 'app-base',
@@ -27,18 +31,23 @@ export class BaseComponent implements OnInit {
  
 
   ngOnInit() {
+    this.onDragEnd(HomeComponent)
   }
   allowDrop(ev) {
     console.log('allowDrop')
     ev.preventDefault();
   }
   
+  getHome(){
+
+  }
+
   drop(ev) {   
     console.log('drop')
     
     switch (this.componentService.hold) {
         case "Header":
-         this.componentService.component = HeaderComponent;
+         this.componentService.component = HeadersComponent;
          break;
         case "Table":
          this.componentService.component = TableComponent;
@@ -61,9 +70,12 @@ export class BaseComponent implements OnInit {
         case "Divider":
          this.componentService.component = DividerComponent;
          break;
-        case "Mask":
-         this.componentService.component = MaskComponent;
-         break;
+         case "Mask":
+          this.componentService.component = MaskComponent;
+          break;
+        case "Textbox":
+          this.componentService.component = TextboxComponent;
+          break;
        }
   
        ev.preventDefault();

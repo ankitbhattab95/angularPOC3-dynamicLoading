@@ -10,14 +10,6 @@ component:any
 hold:string;
   constructor() { }
 
-//  getComponent(event){
-//    switch (event.originalTarget.innerHTML) {
-//      case "Header":
-//        this.component = HeaderComponent;
-//        break;
-//       }
-//       console.log("hiiiiii")
-//  }
  drag(ev) {
    console.log('drag')
    console.log(ev.originalTarget.innerText);

@@ -16,18 +16,20 @@ import { MaskComponent } from './mask/mask.component';
 import { CustomDirective } from './custom.directive';
 import { BaseComponent } from './base/base.component';
 import {ComponentService} from './component.service';
-import { HeaderComponent } from './header/header.component'
+import { HeadersComponent } from './headers/headers.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   entryComponents: [ 
-    HeaderComponent,
     TableComponent,
+    HomeComponent,
     FooterComponent,
     TimeComponent,
     DropdownComponent,
     SpinnerComponent,
     TextboxComponent,
+    HeadersComponent,
     ButtonComponent,
     DividerComponent,
     MaskComponent ],
@@ -45,7 +47,8 @@ import { HeaderComponent } from './header/header.component'
     MaskComponent,
     CustomDirective,
     BaseComponent,
-    HeaderComponent
+    HeadersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

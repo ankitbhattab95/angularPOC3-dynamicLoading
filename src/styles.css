@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.block{
+    margin-left: 20px;
+}
+
+.block h2 ,h3{
+   /* color: blue; */
+   margin-top: 0;
+   padding-top: 20px;
+}
