@@ -26,14 +26,16 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     FooterComponent,
     TimeComponent,
-    DropdownComponent,
     SpinnerComponent,
+    DropdownComponent,
+    
     TextboxComponent,
     HeadersComponent,
     ButtonComponent,
     DividerComponent,
     MaskComponent ],
-  declarations: [
+  
+    declarations: [
     AppComponent,
    
     TableComponent,
